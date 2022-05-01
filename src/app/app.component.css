@@ -1,0 +1,114 @@
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(11, 163, 19);
+    font-size: 275%;
+  }
+  
+  h2,
+  
+  h3 {
+    color: #444;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  
+  /* Navigation link styles */
+  #inicio {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(228, 4, 4);
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  /* Style the links inside the navigation bar */
+  #inicio a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    float: left;
+    display: block;
+    background-color: rgb(83, 22, 22);
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+ .alinear-centro{
+   text-align: center;
+ }
+
+  ul.inicio,
+  ul.inicio * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  }
+  ul.inicio {
+  margin: 10px auto;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  font-size: 18px;
+  }
+  ul.inicio li {
+  list-style: none;
+  }
+  ul.inicio li a {
+  display: block;
+  padding: 10px 10px 10px 20px;
+  background: rgb(11, 46, 143);
+  color: #eee;
+  border-bottom: 1px solid #000;
+  border-top: 1px solid rgb(9, 134, 192);
+  text-decoration: none;
+  box-sizing: border-box;
+  }
+  ul.inicio li ul {
+  max-height: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  transition: .3s all ease-in;
+  }
+  ul.inicio li li a {
+  padding: 10px 10px 10px 40px;
+  background: rgb(32, 208, 221);
+  color: #000;
+  font-size: 16px;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  }
+  ul.acorc li li:last-child a {
+  border-bottom: 0;
+  }
+  ul.inicio li:hover ul {
+  max-height: 300px;
+  transition: .3s all ease-in;
+  }
+  ul.inicio li a:hover {
+  background: rgb(10, 138, 89);
+  color: #fff;
+  }
+  /* Change the color of links on hover */
+  .inicio a:hover {
+    background-color: rgb(160, 21, 137);
+    color: black;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .inicio a.active {
+    background-color: #74a81f;
+    color: rgb(10, 150, 68);
+  }
+  
+  /* Hide the link that should open and close the inicio on small screens */
+  .inicio .icon {
+    display: none;
+  }
+  
+  /* everywhere else */
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  

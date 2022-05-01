@@ -1,0 +1,35 @@
+<div class="col-md-4">
+    <div class="card text-center">
+        <div class="card-header">
+        </div>
+        <div class="card-body">
+            <h1>Administrativos</h1><br></div>
+            
+            <div>
+        <table class="table table-striped mt-5" border="2px solid grey" align="center">
+<br><br>
+                  <tr align="center">
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Contacto</th>
+                    <th>Sueldo Base</th>
+                    <th>Idiomas</th>
+                    <th>Salario</th>
+                  </tr>
+            <tr *ngFor="let admin of admin" align="center">
+                <td>{{admin.id}}</td>
+                <td>{{admin.nombre}}</td>
+                <td>{{admin.apellido}}</td>
+                <td>{{admin.contacto}}</td>
+                <td>{{admin.sueldo}}</td>
+                <td>{{admin.idiomas}}</td>
+                <td>{{admin.salario()}}</td>
+                <td>
+                    <button class="deleteempleado">Eliminar</button>
+                </td>
+                </tr>
+        </table>
+        </div>
+    </div>
+</div>

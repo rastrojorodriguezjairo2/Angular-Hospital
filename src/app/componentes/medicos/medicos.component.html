@@ -1,0 +1,35 @@
+<div class="col-md-4">
+    <div class="card text-center">
+        <div class="card-header">
+        </div>
+        <div class="card-body">
+            <h1>Medicos</h1><br></div>
+            
+            <div>
+        <table class="table table-striped mt-5" border="2px solid grey" align="center">
+<br><br>
+                  <tr align="center">
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Contacto</th>
+                    <th>Sueldo Base</th>
+                    <th>Especialidad</th>
+                    <th>Salario</th>
+                  </tr>
+            <tr *ngFor="let doctor of medicos" align="center">
+                <td>{{doctor.id}}</td>
+                <td>{{doctor.nombre}}</td>
+                <td>{{doctor.apellido}}</td>
+                <td>{{doctor.contacto}}</td>
+                <td>{{doctor.sueldo}}</td>
+                <td>{{doctor.especialidad}}</td>
+                <td>{{doctor.salario()}}</td>
+                <td>
+                    <button class="deleteempleado">Eliminar</button>
+                </td>
+                </tr>
+        </table>
+        </div>
+    </div>
+</div>
