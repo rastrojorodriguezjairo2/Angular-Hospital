@@ -13,6 +13,8 @@ import { PacientesService } from './servicios/pacientes.service';
 import { EmpleadosService } from './servicios/empleados.service';
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { CrearEmpleadosComponent } from './componentes/crear-empleados/crear-empleados.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CrearPacientesComponent } from './componentes/crear-pacientes/crear-pacientes.component';
 
 
 @NgModule({
@@ -25,12 +27,15 @@ import { CrearEmpleadosComponent } from './componentes/crear-empleados/crear-emp
     CovidComponent,
     UrgenciasComponent,
     InicioComponent,
-    CrearEmpleadosComponent
+    CrearEmpleadosComponent,
+    CrearPacientesComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [EmpleadosService, PacientesService],
   bootstrap: [AppComponent]

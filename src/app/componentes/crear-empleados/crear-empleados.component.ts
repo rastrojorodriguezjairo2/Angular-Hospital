@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { EmpleadosService } from 'src/app/servicios/empleados.service';
+
 @Component({
   selector: 'app-crear-empleados',
   templateUrl: './crear-empleados.component.html',

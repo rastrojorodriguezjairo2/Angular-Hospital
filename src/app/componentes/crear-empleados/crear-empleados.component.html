@@ -1,1 +1,39 @@
-<p>crear-empleados works!</p>
+<h1>{{titulo}}</h1>
+<h2 color="blue">Rellene todos los campos por favor</h2>
+<form [formGroup]="crearEmpleado" (ngSubmit)="newEmpleado()">
+    <div class="row">
+        <p>Id:</p>
+        <input type="number" formControlName="id" class="form-control form-control-lg mt-3">
+    </div>
+    <div class="row">
+        <p>Nombre</p>
+        <input type="text" formControlName="nombre" class="form-control form-control-lg mt-3">
+    </div>
+    <div class="row">
+        <p>Apellido</p>
+        <input type="text" formControlName="apellido" class="form-control form-control-lg mt-3">
+    </div>
+    <div class="row">
+        <p>Número de Teléfono</p>
+        <input type="number" formControlName="contacto" class="form-control form-control-lg mt-3">
+    </div>
+    <div class="row">
+        <p>Sueldo Base</p>
+        <input type="number" formControlName="sueldo" class="form-control form-control-lg mt-3">
+    </div>
+    <div class="row">
+        <p>Puesto de trabajo</p>
+        <input type="text" formControlName="puesto" class="form-control form-control-lg mt-3">
+    </div>
+    <div class="row">
+        <p>Especialidad</p>
+        <input type="text" formControlName="especialidad" class="form-control form-control-lg mt-3" placeholder="Solo si es medico">
+    </div>
+    <div class="row">
+        <p>Idiomas</p>
+        <input type="text" formControlName="idiomas" class="form-control form-control-lg mt-3" placeholder="Solo si es administrativo">
+    </div><br><br>
+    <div class="mt-3">
+        <button type="submit" class="btn btn dark btn-lg">Añadir empleado</button>
+    </div>
+</form>

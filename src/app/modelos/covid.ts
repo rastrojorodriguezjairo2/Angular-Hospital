@@ -7,7 +7,7 @@ string){
     super (id, nombre, apellido1, apellido2, edad, dni, telefono, medico, urgencia, tipo)
     this._test = test
     }
-    get pruebas(){
+    get test(){
         return this._test
     }
     get urgencia(){

@@ -15,6 +15,10 @@ export class PacientesComponent implements OnInit {
     private pacienteService: PacientesService,
     private location: Location
   ) {}
+
+  newPacientes(): void{
+  
+  }
   getPacientes(): void
   {
    this.pacienteService.getPacientes().subscribe(e=>{
@@ -31,7 +35,7 @@ export class PacientesComponent implements OnInit {
       this.atendido._tipo,
      )
    })
-  }  ngOnInit(): void {
+  }  ngOnInit() {
      this.pacienteService.getPacientes()
      .subscribe(
        res=> {
