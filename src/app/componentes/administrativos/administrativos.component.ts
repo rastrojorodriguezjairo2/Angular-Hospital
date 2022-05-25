@@ -17,12 +17,14 @@ admin: Administrativo[] = []
     private administrativosService: EmpleadosService,
     private location: Location
   ){}
- 
 
-deleteempleado(id:number){
-  const url =`${this.trabajador}/eliminarempleado/${id}`;
-    return this.trabajador.delete(url);
-}
+
+
+  deleteempleado(id:number){
+    this.administrativosService.deleteempleado(id).subscribe(() => {
+      console.log('Eliminado')
+    })
+   }
 
 getAdministrativos(): void
 {

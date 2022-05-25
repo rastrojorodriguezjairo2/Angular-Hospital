@@ -2,19 +2,17 @@ import { Injectable } from '@angular/core';
 import { HttpClient} from "@angular/common/http";
 import {Pacientes} from "../modelos/pacientes";
 import { Observable } from 'rxjs';
-import {Paciente} from "../interfaces/interfaces";
+
 @Injectable({
   providedIn: 'root'
 })
 export class PacientesService {
   
-  newPacientes(paciente: any) {
-    throw new Error('Method not implemented.');
-  }
-    private url = "https://proyecto-hospital-jairo.herokuapp.com"
+  private url = "https://res-api-hospital-jairo.herokuapp.com"
   constructor(private http: HttpClient) {}
-  postpacientes(doc: Paciente) {
-    const url=`${this.url}/newpaciente`;
+ 
+  newPacientes(doc: Pacientes) {
+    const url =`${this.url}/newpaciente`;
     return this.http.post(url, doc);
   }
   getPacientes(){
@@ -33,13 +31,12 @@ export class PacientesService {
     const url =`${this.url}/buspaciente/${id}`;
     return this.http.get(url);
   }
-
-  updatepaciente(doc: Pacientes){
-    const url =`${this.url}/actualizarpaciente/:id`;
-    return this.http.put(url, doc);
+  updatepaciente(id: number){
+    const url =`${this.url}/actualizarpaciente/${id}`;
+    return this.http.put(url, id);
   }
-  deletepaciente(){
-    const url =`${this.url}/eliminarpaciente/:id`;
+  deletepaciente(id: number){
+    const url =`${this.url}/eliminarpaciente/${id}`;
     return this.http.delete(url);
   }
 }

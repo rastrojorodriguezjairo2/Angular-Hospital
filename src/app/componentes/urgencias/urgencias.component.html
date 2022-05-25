@@ -1,1 +1,41 @@
-<p>urgencias works!</p>
+<div class="col-md-4">
+    <div class="card text-center">
+        <div class="card-header">
+        </div>
+        <div class="card-body">
+            <h1>Pacientes De Urgencias</h1><br></div>
+            
+            <div>
+        <table class="table table-striped mt-5" border="2px solid grey" align="center">
+<br><br>
+                  <tr align="center">
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Primer Apellido</th>
+                    <th>Segundo Apellido</th>
+                    <th>Edad</th>
+                    <th>Dni</th>
+                    <th>Medico Asignado</th>
+                    <th>Teléfono</th>
+                    <th>Urgencia</th>
+                    <th>Pruebas</th>
+                  </tr>
+            <tr *ngFor="let urgen56 of PacienteUrg" align="center">
+                <td>{{urgen56.id}}</td>
+                <td>{{urgen56.nombre}}</td>
+                <td>{{urgen56.apellido1}}</td>
+                <td>{{urgen56.apellido2}}</td>
+                <td>{{urgen56.edad}}</td>
+                <td>{{urgen56.dni}}</td>
+                <td>{{urgen56.medico}}</td>
+                <td>{{urgen56.telefono}}</td>
+                <td>{{urgen56.urgencia}}</td>
+                <td>{{urgen56.pruebas}}</td>
+                <td>
+                    <button (click)="deletepaciente(urgen56.id)" class="fas fa-trash-alt fa-lg text-danger">Eliminar</button>
+                </td>
+                </tr>
+        </table>
+        </div>
+    </div>
+</div>

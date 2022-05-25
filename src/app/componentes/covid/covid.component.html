@@ -1,1 +1,41 @@
-<p>covid works!</p>
+<div class="col-md-4">
+    <div class="card text-center">
+        <div class="card-header">
+        </div>
+        <div class="card-body">
+            <h1>Pacientes Covid</h1><br></div>
+            
+            <div>
+        <table class="table table-striped mt-5" border="2px solid grey" align="center">
+<br><br>
+                  <tr align="center">
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Primer Apellido</th>
+                    <th>Segundo Apellido</th>
+                    <th>Edad</th>
+                    <th>Dni</th>
+                    <th>Medico Asignado</th>
+                    <th>Teléfono</th>
+                    <th>Urgencia</th>
+                    <th>Test</th>
+                  </tr>
+            <tr *ngFor="let co19 of PacienteCo" align="center">
+                <td>{{co19.id}}</td>
+                <td>{{co19.nombre}}</td>
+                <td>{{co19.apellido1}}</td>
+                <td>{{co19.apellido2}}</td>
+                <td>{{co19.edad}}</td>
+                <td>{{co19.dni}}</td>
+                <td>{{co19.medico}}</td>
+                <td>{{co19.telefono}}</td>
+                <td>{{co19.urgencia}}</td>
+                <td>{{co19.test}}</td>
+                <td>
+                    <button (click)="deletepaciente(co19.id)" class="fas fa-trash-alt fa-lg text-danger">Eliminar</button>
+                </td>
+                </tr>
+        </table>
+        </div>
+    </div>
+</div>

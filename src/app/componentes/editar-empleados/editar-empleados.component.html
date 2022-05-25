@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h1>{{titulo}}</h1>
+                    <span *ngIf="submitted && editarEmpleado.invalid" class="badge badge-danger">Pro favor, ingrese todos
+                        los campos</span>
+                    <form [formGroup]="editarEmpleado" (ngSubmit)="updateempleado()">
+                        <div class="row">
+
+                            <input type="number" value="trabajador._id" formControlName="_id" class="mt-2 form-control form-control-lg"
+                                placeholder="ID">
+                        </div>
+                        <div class="row">
+                            <input type="text" formControlName="nombre" class="form-control form-control-lg mt-3"
+                                placeholder="Nombre">
+                        </div>
+                        <div class="row">
+                            <input type="text" formControlName="apellido" class="form-control form-control-lg mt-3"
+                                placeholder="Apellido">
+                        </div>
+                        <div class="row">
+                            <input type="number" formControlName="contacto" class="form-control form-control-lg mt-3"
+                                placeholder="Contacto">
+                        </div>
+                        <div class="row">
+                            <input type="number"  formControlName="sueldo" class="form-control form-control-lg mt-3"
+                                placeholder="Sueldo Base">
+                        </div>
+                        <div class="row">
+                            <input type="text" formControlName="puesto" class="form-control form-control-lg mt-3"
+                                placeholder="Puesto">
+                        </div>
+                        <div class="row">
+                            <input type="text"  formControlName="especialidad" class="form-control form-control-lg mt-3"
+                                placeholder="Especialidad">
+                        </div>
+                        <div class="row">
+                            <input type="text"  formControlName="idiomas" class="form-control form-control-lg mt-3"
+                                placeholder="Idiomas">
+                        </div>
+                        <div>
+                            <button type="submit" >Editar</button>                      
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

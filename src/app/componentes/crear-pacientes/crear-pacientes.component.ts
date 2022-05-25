@@ -19,18 +19,18 @@ export class CrearPacientesComponent implements OnInit {
     private pacientesService: PacientesService,
     private activeRoute: ActivatedRoute) {
       this.crearPaciente = this.fb.group({
-        _id: ['',Validators.required],
-        _nombre: ['',Validators.required],
-        _apellido1: ['',Validators.required],
-        _apellido2: ['',Validators.required],
-        _edad: ['',Validators.required],
-        _dni: ['',Validators.required],
-        _telefono: ['',Validators.required],
-        _medico: ['',Validators.required],
-        _urgencia: ['',Validators.required],
-        _tipo: ['',Validators.required],
-        _pruebas: ['',Validators.required],
-        _test: ['',Validators.required],
+        id: ['',Validators.required],
+        nombre: ['',Validators.required],
+        apellido1: ['',Validators.required],
+        apellido2: ['',Validators.required],
+        edad: ['',Validators.required],
+        dni: ['',Validators.required],
+        telefono: ['',Validators.required],
+        medico: ['',Validators.required],
+        urgencia: ['',Validators.required],
+        tipo: ['',Validators.required],
+        pruebas: ['',Validators.required],
+        test: ['',Validators.required],
       })
       this.id = this.activeRoute.snapshot.paramMap.get("id")
      }
@@ -38,25 +38,31 @@ export class CrearPacientesComponent implements OnInit {
   ngOnInit(): void {
     
   }
-  newPacientes():void{
+  newPacientes(){
     this.submitted = true
     if (this.crearPaciente.invalid) {
       return;
     }
     const paciente: any = {
-      id: this.crearPaciente.value._id,
-      nombre: this.crearPaciente.value._nombre,
-      apellido1: this.crearPaciente.value._apellido1,
-      apellido2: this.crearPaciente.value._apellido2,
-      edad: this.crearPaciente.value._edad,
-      dni: this.crearPaciente.value._dni,
-      telefono: this.crearPaciente.value._telefono,
-      medico: this.crearPaciente.value._medico,
-      urgencia: this.crearPaciente.value._urgencia,
-      tipo: this.crearPaciente.value._tipo,
-      pruebas: this.crearPaciente.value._pruebas,
-      test: this.crearPaciente.value._test,
+      id: this.crearPaciente.value.id,
+      nombre: this.crearPaciente.value.nombre,
+      apellido1: this.crearPaciente.value.apellido1,
+      apellido2: this.crearPaciente.value.apellido2,
+      edad: this.crearPaciente.value.edad,
+      dni: this.crearPaciente.value.dni,
+      telefono: this.crearPaciente.value.telefono,
+      medico: this.crearPaciente.value.medico,
+      urgencia: this.crearPaciente.value.urgencia,
+      tipo: this.crearPaciente.value.tipo,
+      pruebas: this.crearPaciente.value.pruebas,
+      test: this.crearPaciente.value.test,
     }
-  }
-
+    this.pacientesService.newPacientes(paciente).subscribe(
+      ()=>{
+        console.log(paciente)
+        console.log("Se ha creado correctamente")
+      }
+      ), (error: any)=> {
+        console.log(error);
+      }}
 }

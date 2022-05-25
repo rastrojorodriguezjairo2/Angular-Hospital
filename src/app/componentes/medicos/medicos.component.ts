@@ -1,27 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { EmpleadosService } from '../../servicios/empleados.service';
-import {medico} from '../../interfaces/interfaces';
-import { ActivatedRoute } from "@angular/router";
 import { Location } from "@angular/common";
 import { Medicos } from 'src/app/modelos/medicos';
 
 @Component({
   selector: 'app-empleados',
   templateUrl: './medicos.component.html',
-  styleUrls: ['./medicos.component.css']
+  styleUrls: ['./medicos.component.css'],
+  providers: [EmpleadosService]
 })
+
 export class MedicosComponent implements OnInit {
-trabajador: any = [];
-medicos: Medicos[] = []
+  trabajador: any = [];
+  medicos: Medicos[] = []
+  
   constructor(
     private medicosService: EmpleadosService,
     private location: Location
   ){}
  
-
 deleteempleado(id:number){
-  const url =`${this.trabajador}/eliminarempleado/${id}`;
-    return this.trabajador.delete(url);
+ this.medicosService.deleteempleado(id).subscribe(() => {
+   console.log('Eliminado')
+ })
 }
 
 getMedicos(): void
@@ -37,8 +38,6 @@ getMedicos(): void
     console.log(this.medicos)
   })
 }  
-
-
 
 ngOnInit() {
   this.getMedicos()

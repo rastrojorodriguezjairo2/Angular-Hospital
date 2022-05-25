@@ -5,36 +5,36 @@
         <div class="card-body">
             <h1>Pacientes</h1>
             <button class="btn btn-success float-end mt-4" routerLink="/crear-pacientes">  Crear Paciente </button><br></div></div><div>
-                <table class="table table-striped mt-5 "border="2px solid grey" align="center">
-<br><br>
-                  <tr>
-                    <th>Id</th>
-                    <th>Nombre</th>
-                    <th>Apellido1</th>
-                    <th>Apellido2</th>
-                    <th>Edad</th>
-                    <th>Dni</th>
-                    <th>Medico</th>
-                    <th>Telefono</th>
-                    <th>Urgencia</th>
-                    <th>Tipo</th>
-                    <th>Pruebas</th>
-                    <th>Test</th>
-                  </tr>
-            <tr *ngFor="let pacientes of atendido">
-                <td>{{pacientes._id}}</td>
-                <td>{{pacientes._nombre}}</td>
-                <td>{{pacientes._apellido1}}</td>
-                <td>{{pacientes._apellido2}}</td>
-                <td>{{pacientes.edad}}</td>
-                <td>{{pacientes._dni}}</td>
-                <td>{{pacientes._medico}}</td>
-                <td>{{pacientes._telefono}}</td>
-                <td>{{pacientes._urgencia}}</td>
-                <td>{{pacientes._tipo}}</td>
-                <td>{{pacientes._pruebas}}</td>
-                <td>{{pacientes._test}}</td>
-            </tr>
-        </table>
+                <table class="table table-striped mt-5" border="2px solid grey" align="center">
+                    <br><br>
+                     <tr align="center">
+                     <th>Id</th>
+                     <th>Nombre</th>
+                     <th>Primer Apellido</th>
+                     <th>Segundo Apellido</th>
+                     <th>Edad</th>
+                     <th>DNI</th>
+                     <th>Doctor Asignado</th>
+                     <th>Telefono</th>
+                     <th>Urgencia</th>
+                     <th>Tipo de paciente</th>
+                     <th>Pruebas</th>
+                     <th>Test</th>
+                     </tr>
+                     <tr *ngFor="let pacientes of atendido" align="center">
+                     <td>{{pacientes._id}}</td>
+                     <td>{{pacientes._nombre}}</td>
+                     <td>{{pacientes._apellido1}}</td>
+                     <td>{{pacientes._apellido2}}</td>
+                     <td>{{pacientes._edad}}</td>
+                     <td>{{pacientes._dni}}</td>
+                     <td>{{pacientes._medico}}</td>
+                     <td>{{pacientes._telefono}}</td>
+                     <td>{{pacientes._urgencia}}</td>
+                     <td>{{pacientes._tipo}}</td>
+                     <td>{{pacientes._pruebas}}</td>
+                     <td>{{pacientes._test}}</td>
+               </tr>
+            </table>
         </div>
     </div>

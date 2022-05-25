@@ -2,16 +2,16 @@ import { Injectable } from '@angular/core';
 import { HttpClient} from "@angular/common/http";
 import {Empleados} from "../modelos/empleados";
 import { Observable } from 'rxjs';
-import {Empleado} from "../interfaces/interfaces";
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmpleadosService {
+
    private url = "https://res-api-hospital-jairo.herokuapp.com"
   constructor(private http: HttpClient) {}
 
-  newEmpleado(doc:Empleado) {
+  newEmpleado(doc:Empleados) {
     const url =`${this.url}/newempleado`;
     return this.http.post(url, doc);
   }
