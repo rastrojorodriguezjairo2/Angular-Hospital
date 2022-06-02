@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { PacientesService } from '../../servicios/pacientes.service';
-import { Location } from "@angular/common";
 import { Pacientes } from 'src/app/modelos/pacientes';
 
 @Component({
@@ -13,7 +12,6 @@ export class PacientesComponent implements OnInit {
 atendido: any = [];
   constructor(
     private pacientesService: PacientesService,
-    private location: Location
   ){}
  
   getPacientes(): void
@@ -31,13 +29,14 @@ atendido: any = [];
         this.atendido._urgencia,
         this.atendido._tipo,
         )
+        console.log(`${this.atendido.contcovid()}, ${this.atendido.conturgen()}`)
       })
   }
   
   newPacientes(): void{
   
   }
-
+  
   deletepaciente(): void{
     this.pacientesService.getPacientes().subscribe(e=>{
       this.atendido=new Pacientes(

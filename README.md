@@ -1,27 +1,40 @@
 # AngularHospital
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
+Este proyecto hace uso de [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
 
-## Development server
+## Enlaces
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+En este proyecto, trata de la gestión de los datos alojados en una base de datos alojada en 
 
-## Code scaffolding
+Mongo Atlas: mongodb+srv://jairo:1234@cluster0.dynye.mongodb.net/hospital?retryWrites=true&w=majority
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+A la cual podremos acceder gracias a una api rest diseñada en local y subida tanto a 
 
-## Build
+Heroku: https://res-api-hospital-jairo.herokuapp.com
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Como a 
 
-## Running unit tests
+GitHub: https://github.com/rastrojorodriguezjairo2/RES_API_Hospital
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Tambien cabe destacar que este proyecto angular estará subido tambien en 
 
-## Running end-to-end tests
+Heroku: https://proyecto-angular-hospital.herokuapp.com
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+y en 
 
-## Further help
+GitHub: https://github.com/rastrojorodriguezjairo2/Angular-Hospital
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Introducción
+
+Este proyecto trata sobre la gestión de empleados y pacientes en un hospital, concretamente en la sección de urgencias, pudiendo ser 
+la persona del mostrador de urgencias la persona que utiliza este programa.
+
+## ¿Qué podemos hacer?
+
+En este programa, podremos tanto ver la lista de empleados (Medicos y Administrativos) y la de pacientes (Covid y Urgencias) divididos
+en su propio sistema de clases y subclases, que se explicara mejor en el documento.
+A parte de poder crear y eliminar nuevos miembros de dichos grupos y poder vislumbrar unos graficos ilustradores de los datos que manejamos.
+
+## Finalidad del proyecto
+
+Dar a entender los conocimientos y del alumno así como tambien dudas que han surgido durante el proyecto y que no se han logrado resolver.

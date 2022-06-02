@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { EmpleadosService } from '../../servicios/empleados.service';
-import {administrativo} from '../../interfaces/interfaces';
 import { ActivatedRoute } from "@angular/router";
 import { Location } from "@angular/common";
 import { Administrativo } from 'src/app/modelos/administrativo';

@@ -12,6 +12,16 @@ export class Medicos extends Empleados {
     override get sueldo () {
         return this._sueldo
     }
+
+    pedi(){
+        let contpe: number;
+        contpe= 0;
+        if (this._especialidad=="Pediatría"){
+            contpe = contpe + 1
+        }
+        return contpe
+    }
+
     override salario(): number {
         let _salario : number;
         _salario = super.sueldo;

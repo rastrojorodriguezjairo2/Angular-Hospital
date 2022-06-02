@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { EmpleadosService } from 'src/app/servicios/empleados.service';
 
 @Component({
@@ -58,5 +58,4 @@ export class CrearEmpleadosComponent implements OnInit {
       console.log(error);
     }
   }
-
 }

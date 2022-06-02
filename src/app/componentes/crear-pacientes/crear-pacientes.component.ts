@@ -36,8 +36,8 @@ export class CrearPacientesComponent implements OnInit {
      }
 
   ngOnInit(): void {
-    
   }
+
   newPacientes(){
     this.submitted = true
     if (this.crearPaciente.invalid) {
@@ -64,5 +64,6 @@ export class CrearPacientesComponent implements OnInit {
       }
       ), (error: any)=> {
         console.log(error);
-      }}
+      }
+    }
 }

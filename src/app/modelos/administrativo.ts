@@ -12,6 +12,7 @@ export class Administrativo extends Empleados {
     override get sueldo () {
         return this._sueldo
     }
+
     override salario(): number {
             let _salario : number
             _salario = super.sueldo;

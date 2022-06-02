@@ -25,15 +25,27 @@ deleteempleado(id:number){
  })
 }
 
+getPediatras():void{
+  this.medicosService.getMedicos().subscribe(med=>{
+    this.trabajador = med
+    let me: Medicos
+    for (let medi of this.trabajador){
+      me = new Medicos(medi._id, medi._nombre, medi._apellido, medi._contacto, medi._sueldo, medi.puesto, medi._especialidad)
+      this.medicos.push(me)
+    }
+    
+  })
+}
+
 getMedicos(): void
 {
   this.medicosService.getMedicos().subscribe(med=>{
     this.trabajador = med
-    let tempO: Medicos
+    let me: Medicos
     for (let medi of this.trabajador){
-      tempO = new Medicos(medi._id, medi._nombre, medi._apellido, medi._contacto, medi._sueldo, medi.puesto, medi._especialidad)
-      console.log(`${tempO.nombre}, ${tempO.salario()}`)
-      this.medicos.push(tempO)
+      me = new Medicos(medi._id, medi._nombre, medi._apellido, medi._contacto, medi._sueldo, medi.puesto, medi._especialidad)
+      console.log(`${me.nombre}, ${me.salario()}`)
+      this.medicos.push(me)
     }
     console.log(this.medicos)
   })

@@ -48,6 +48,26 @@ export class Pacientes {
     get tipo(){
         return this._tipo
     }
+/*
+    contcovid(){
+        let _cov 
+        _cov = 0
+    if (this._tipo=="covid") {
+        _cov= _cov +1
+    }
+    return _cov
+}
+    conturgen(){
+        let _urg: number;
+        _urg =0;
+        if (this._tipo=="urgencia"){
+            _urg = 1 + _urg
+        }
+    return _urg
+}
+*/
+
+
     todo() {
         return `Id: ${this._id}, Nombre: ${this._nombre}, Primer apellido: ${this._apellido1}, Segundo Apellido: ${this._apellido2}, Edad: ${this._edad}, DNI: ${this._dni}, Telefono: ${this._telefono}, Medico: ${this._medico}, Urgencia: ${this._urgencia}, Tipo: ${this._tipo}`
     }

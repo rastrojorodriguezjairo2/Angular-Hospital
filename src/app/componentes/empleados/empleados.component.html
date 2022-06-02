@@ -4,7 +4,8 @@
         </div>
         <div class="card-body">
             <h1>Empleados</h1>
-            <div>
+            <button routerLink="/inicio">Volver</button>
+            <div><br>
            <button class="btn btn-success float-end mt-4" routerLink="/crear-empleados">  Crear Empleado </button><br></div></div><div>
         <table class="table table-striped mt-5" border="2px solid grey" align="center">
 <br><br>
@@ -27,9 +28,6 @@
                 <td>{{empleados._puesto}}</td>
                 <td>{{empleados._especialidad}}</td>
                 <td>{{empleados._idiomas}}</td>
-                <td>
-                    <button class="btn btn-success float-end mt-4" routerLink="/detalles-empleados">Detalles</button>
-             </td>
             </tr>
         </table>
         </div>

@@ -31,8 +31,6 @@ export  class  Empleados {
     get puesto(){
         return this._puesto;
     }
-    
-
     salario(){
         let salario : number;
         salario = this._sueldo;
@@ -41,5 +39,4 @@ export  class  Empleados {
     todo(){
         return `Id: ${this._id}, Nombre: ${this._nombre}, Apellido: ${this._apellido}, Contacto: ${this._contacto}, Sueldo: ${this._sueldo}, Tipo: ${this._puesto}`
     }
-
 }

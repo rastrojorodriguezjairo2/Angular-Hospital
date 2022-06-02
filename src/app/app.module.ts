@@ -17,9 +17,10 @@ import { CrearEmpleadosComponent } from './componentes/crear-empleados/crear-emp
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CrearPacientesComponent } from './componentes/crear-pacientes/crear-pacientes.component';
 import { GraficasComponent } from './componentes/graficas/graficas.component';
-import { EditarEmpleadosComponent } from './componentes/editar-empleados/editar-empleados.component';
-import { DetallesEmpleadosComponent } from './componentes/detalles-empleados/detalles-empleados.component';
-
+import { HighchartsChartModule } from 'highcharts-angular';
+import { GraficaMedicosComponent } from './componentes/grafica-medicos/grafica-medicos.component';
+import { GraficaPacientesComponent } from './componentes/grafica-pacientes/grafica-pacientes.component';
+import {GoogleMapsModule} from '@angular/google-maps'
 
 @NgModule({
   declarations: [
@@ -28,14 +29,14 @@ import { DetallesEmpleadosComponent } from './componentes/detalles-empleados/det
     EmpleadosComponent,
     AdministrativoComponent,
     PacientesComponent,
+    GraficaPacientesComponent,
     CovidComponent,
     UrgenciasComponent,
     InicioComponent,
     CrearEmpleadosComponent,
     CrearPacientesComponent,
     GraficasComponent,
-    EditarEmpleadosComponent,
-    DetallesEmpleadosComponent
+    GraficaMedicosComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +44,9 @@ import { DetallesEmpleadosComponent } from './componentes/detalles-empleados/det
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    ChartModule
+    ChartModule,
+    HighchartsChartModule,
+    GoogleMapsModule
   ],
   providers: [EmpleadosService, PacientesService],
   bootstrap: [AppComponent]

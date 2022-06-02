@@ -1,5 +1,9 @@
 <h1>{{titulo}}</h1>
+
+<button routerLink="/inicio">Volver</button>
+
 <h2 color="blue">Rellene todos los campos por favor</h2>
+
 <form [formGroup]="crearPaciente" (ngSubmit)="newPacientes()">
     <div class="row">
         <p>Id:</p>
@@ -10,11 +14,11 @@
         <input type="text" formControlName="nombre" class="form-control form-control-lg mt-3">
     </div>
     <div class="row">
-        <p>Primer Apellido</p>
+        <p>Primer apellido</p>
         <input type="text" formControlName="apellido1" class="form-control form-control-lg mt-3">
     </div>
     <div class="row">
-        <p>Segundo Apellido</p>
+        <p>Segundo apellido</p>
         <input type="text" formControlName="apellido2" class="form-control form-control-lg mt-3">
     </div>
     <div class="row">
@@ -22,35 +26,35 @@
         <input type="number" formControlName="edad" class="form-control form-control-lg mt-3">
     </div>
     <div class="row">
-        <p>DNI</p>
+        <p>Dni</p>
         <input type="text" formControlName="dni" class="form-control form-control-lg mt-3">
-    </div>
-    <div class="row">
-        <p>Doctor asignado</p>
-        <input type="text" formControlName="medico" class="form-control form-control-lg mt-3">
     </div>
     <div class="row">
         <p>Teléfono</p>
         <input type="number" formControlName="telefono" class="form-control form-control-lg mt-3">
     </div>
     <div class="row">
-        <p>Motivo de la urgencia</p>
+        <p>Medico asignado</p>
+        <input type="text" formControlName="medico" class="form-control form-control-lg mt-3">
+    </div>
+    <div class="row">
+        <p>Dolencia en cuestión</p>
         <input type="text" formControlName="urgencia" class="form-control form-control-lg mt-3">
     </div>
     <div class="row">
-        <p>Tipo de paciente</p>
+        <p>Tipo de Paciente</p>
         <input type="text" formControlName="tipo" class="form-control form-control-lg mt-3">
     </div>
     <div class="row">
-        <p>Pruebas realizadas</p>
-        <input type="text" formControlName="pruebas" class="form-control form-control-lg mt-3" placeholder="Solo si el tipo es urgencia">
+        <p>Pruebas a realizar</p>
+        <input type="text" formControlName="pruebas" class="form-control form-control-lg mt-3">
     </div>
     <div class="row">
-        <p>Test covid</p>
-        <input type="text" formControlName="test" class="form-control form-control-lg mt-3" placeholder="Solo si el tipo es covid">
+        <p>Test covid </p>
+        <input type="text" formControlName="test" class="form-control form-control-lg mt-3">
     </div>
-    <br><br>
+    <br><br><br>
     <div class="mt-3">
-        <button type="submit">Añadir Paciente </button>
+        <button type="submit" class="btn btn dark btn-lg">Añadir Paciente</button>
     </div>
 </form>
